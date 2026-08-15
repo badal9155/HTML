@@ -1,0 +1,14 @@
+div {
+    background-color: aqua;
+     display:flex;
+     justify-content:space-evenly; 
+}
+a{
+    text-decoration: none;
+    color: black;
+    background-color: bisque;
+}
+li {
+list-style: none;
+display: inline;
+}

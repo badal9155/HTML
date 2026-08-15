@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motor Parts Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding: 20px;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mb-4">Motor Parts Shop</h1>
+    <div class="row" id="product-list">
+      <!-- Products will be inserted here -->
+    </div>
+    <hr>
+    <h2>🛒 Cart</h2>
+    <ul id="cart" class="list-group mb-3"></ul>
+    <button class="btn btn-success" onclick="checkout()">Proceed to Checkout</button>
+  </div>
+
+  <script>
+    const products = [
+      { id: 1, name: "Bike Engine", price: 15000, img: "https://via.placeholder.com/300x200?text=Bike+Engine" },
+      { id: 2, name: "Motor Oil", price: 350, img: "https://via.placeholder.com/300x200?text=Motor+Oil" },
+      { id: 3, name: "Brake Pad", price: 600, img: "https://via.placeholder.com/300x200?text=Brake+Pad" }
+    ];
+
+    const cart = [];
+
+    function renderProducts() {
+      const list = document.getElementById("product-list");
+      products.forEach(p => {
+        const card = document.createElement("div");
+        card.className = "col-md-4 mb-4";
+        card.innerHTML = `
+          <div class="card">
+            <img src="${p.img}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">${p.name}</h5>
+              <p class="card-text">₹${p.price}</p>
+              <button class="btn btn-primary" onclick="addToCart(${p.id})">Add to Cart</button>
+            </div>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function addToCart(id) {
+      const product = products.find(p => p.id === id);
+      cart.push(product);
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartList = document.getElementById("cart");
+      cartList.innerHTML = "";
+      cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-items-center";
+        li.innerHTML = `
+          ${item.name} - ₹${item.price}
+          <button class="btn btn-sm btn-danger" onclick="removeFromCart(${index})">Remove</button>
+        `;
+        cartList.appendChild(li);
+      });
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function checkout() {
+      alert("Payment Gateway Integration Coming Soon!\nTotal: ₹" + cart.reduce((sum, p) => sum + p.price, 0));
+    }
+
+    renderProducts();
+  </script>
+</body>
+</html>

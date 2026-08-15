@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
+
+    <style>
+        /* Basic resets and fonts */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #fff;
+            color: #202124;
+        }
+
+        /* Header and Navigation */
+        header {
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #202124;
+            font-size: 14px;
+        }
+
+        .app-icon, .profile-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Main Search Section */
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .google-logo {
+            width: 272px;
+            height: 92px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            width: 584px;
+            max-width: 90%;
+            height: 44px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            padding: 0 14px;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+            transition: box-shadow 0.3s;
+        }
+
+        .search-bar:hover, .search-bar:focus-within {
+            box-shadow: 0 2px 8px rgba(32, 33, 36, .28);
+        }
+
+        #search-input {
+            flex-grow: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin: 0 8px;
+            cursor: pointer;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons button {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-size: 14px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            background-color: #f0f0f0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-region {
+            color: #70757a;
+            font-size: 14px;
+            border-bottom: 1px solid #dadce0;
+            padding-bottom: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #70757a;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Gmail</a></li>
+                <li><a href="#">Images</a></li>
+                <li><a href="#"><img src="https://lh3.googleusercontent.com/a/ACg8ocL8T6l5xP5S3G4M2S4o4v6t7l1o7u7b7l2o1p1S=s96-c-mo" alt="Apps" class="app-icon"></a></li>
+                <li><a href="#"><img src="https://lh3.googleusercontent.com/a/ACg8ocL8T6l5xP5S3G4M2S4o4v6t7l1o7u7b7l2o1p1S=s96-c-mo" alt="Profile" class="profile-icon"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="google-logo">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search Google or type a URL">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Google_mic.svg" alt="Voice Search" class="icon mic-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Google_mic.svg" alt="Image Search" class="icon image-icon">
+            </div>
+            <div class="buttons">
+                <button>Google Search</button>
+                <button>I'm Feeling Lucky</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-region">India</div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="chahatkumar5298">About</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">How Search works</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">namit pelu</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('search-input');
+            const searchButtons = document.querySelectorAll('.buttons button');
+
+            searchButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const query = searchInput.value;
+                    if (query) {
+                        console.log(`Searching for: ${query}`);
+                        // In a real application, you would redirect the user
+                        // window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                    }
+                });
+            });
+
+            // You can also add functionality to handle the 'Enter' key
+            searchInput.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    const query = searchInput.value;
+                    if (query) {
+                        console.log(`Searching for: ${query}`);
+                        // window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

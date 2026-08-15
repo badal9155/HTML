@@ -1,0 +1,45 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+
+
+}
+
+#navbar {
+  height:60px;
+  background-color:#0f1111;
+}
+button {
+    background-color:#f08804;
+
+}
+#logo
+{
+    color:#f08804;
+    font-size:25px;
+}
+a {
+    margin-right:200px;
+    text-decoration: none;
+}
+.contentbox{
+    height:100px;
+    width:100px;
+    border:2px solid black;
+    display:inline-block;
+    margin:100px
+}
+#content{
+    height:200px;
+}
+footer {
+    background-color: #232f3e; /* dark background */
+    color: white;
+    text-align: center;
+     padding: 50px;
+    margin-top: 350px;
+    font-size: 20px; 
+     height: 10px; 
+}

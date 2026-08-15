@@ -1,0 +1,29 @@
+#one {
+    font-size: 25px;
+    line-height: 50px;
+    text-transform: lowercase;
+}
+#three {
+    font-size: 10px;
+    }
+    div {  
+        height:100px;
+        width:100px;
+                background-color: yellow;
+               /* border-width:2px;
+                border-style: solid;
+                border-color:aqua;*/
+                border:2px solid red;
+                text-align: right;
+
+    }
+    h1{
+        width:200px;
+        height:50px;
+        background-color: red;
+       /* border-width:2px;
+        border-style: solid;
+        border-color: blue;*/
+        border :2px solid blue;
+        text-align:center;
+    }
